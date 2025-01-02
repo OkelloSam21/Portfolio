@@ -1,0 +1,36 @@
+/* Adding quotation marks to testimonials */
+.testimonial::before {
+    content: '"';
+  }
+  .testimonial::after {
+    content: '"';
+  }
+  
+  /* Creating a decorative line after headings */
+  h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Adding icons before links */
+  .external-link::before {
+    content: '↗';
+    margin-right: 5px;
+  }
+  
+  /* Creating tooltips */
+  .tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    display: none;
+    background: black;
+    color: white;
+    padding: 5px;
+  }
+  .tooltip:hover::after {
+    display: block;
+  }
